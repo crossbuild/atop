@@ -61,6 +61,11 @@ typedef __u8	u8;
 #include "ifprop.h"
 #include "photosyst.h"
 
+static inline __u32 ethtool_cmd_speed(struct ethtool_cmd *ep)
+{
+	return ep->speed;
+}
+
 static struct ifprop	ifprops[MAXINTF];
 
 /*
